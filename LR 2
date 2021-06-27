@@ -1,0 +1,16 @@
+Функции замыкания в JavaSkript 
+<script>
+
+function f1(x) { //родительская функция
+
+function f2(y) { //внутренняя функция f2 return x + y; }
+
+return f2; /* родительская функция возвращает в качестве результата внутреннюю функцию */ } var c1 = f1(2); var c2 = f1(5);
+
+console.dir(c1); //отобразим детальную информацию о функции c1 console.dir(c2); //отобразим детальную информацию о функции c2
+
+console.log(c1(5)); //7 console.log(c2(5)); //10
+</script> <script> window.onload = function() { var count = 0; var message = "Количество нажатийв: "; var div = document.getElementById("message"); var button = document.getElementById("my_btn"); button.onclick = function() { count++; div.innerHTML = message + count; }; }; </script>
+
+Нажми на клавишу!
+<script> var wine = "Merlot"; var bar = function() { var wine = "Cabernet"; return function(){ return wine; } }; var winebar = bar(); console.log(wine); console.log(winebar()); </script> 
