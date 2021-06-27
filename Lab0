@@ -1,0 +1,7 @@
+let fullName;
+    fullName = 'Elena Fayad';
+
+let email = 'e.fayadl@gmail.com';
+
+alert(fullName);
+alert(email);
